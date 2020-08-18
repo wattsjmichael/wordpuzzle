@@ -5,30 +5,23 @@ $(document).ready(function(){
         let inputArray = inputSent.split(" ");
         console.log(inputArray);
         let newArray = [];
-        let anotherNewArray= [];
-        let pushIArray= [];
-        let pushOArray = [];
-        let pushUArray = [];
+        let capitalArray= [];
 
         // inputArray.forEach(function(letter){
         //   newArray.push(letter.replace("a", "-"));
         // }) 
 
         for (index = 0; index < inputArray.length; index += 1) {
-            newArray.push(inputArray[index].replace("a", "-")); 
-                anotherNewArray.push(newArray[index].replace("e", "-")); 
-                    pushIArray.push(anotherNewArray[index].replace("i", "-")); 
-                        pushOArray.push(pushIArray[index].replace("o", "-")); 
-                            pushUArray.push(pushOArray[index].replace("u", "-"));
-                        
+            newArray.push(inputArray[index].replace("a", "-").replace("e", "-").replace("i","-").replace("o", "-").replace("u", "-")); 
+                capitalArray.push(newArray[index].replace("A", "-").replace("E", "-").replace("I", "-").replace("O", "-").replace("U", "-"));
                     
                 
             
-            console.log(pushUArray);         
+            console.log(newArray);         
             
         }
         // console.log('Outside the loop;' + index);
-        console.log(pushUArray);
-        $("#result").text(pushUArray.join(" "));
+        console.log(capitalArray);
+        $("#result").text(capitalArray.join(" "));
     })
 })
